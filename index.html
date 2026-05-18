@@ -614,13 +614,13 @@
     // Framing-Texte pro Bedingung (später anpassen)
     const framingTexte = {
       //control = w
-      'control': '',
+      'w': '',
       //social_proof = x
-      'social_proof': '87 % der Nutzer in dieser Befragung haben diesen Film mit 4 oder 5 Sternen bewertet.',
+      'x': '87 % der Nutzer in dieser Befragung haben diesen Film mit 4 oder 5 Sternen bewertet.',
       //authority = y
-      'authority': 'Dieser Film hat auf IMDb ein Rating von 8.9 / 10.',
+      'y': 'Dieser Film hat auf IMDb ein Rating von 8.9 / 10.',
       //commitment = z
-      'commitment': 'Basierend auf deiner Auswahl der 10 Filme passt dieser Film genau zu deinem Geschmack.',
+      'z': 'Basierend auf deiner Auswahl der 10 Filme passt dieser Film genau zu deinem Geschmack.',
     };
 
     // Aktive Bedingung — hier später per URL-Parameter oder Zufallszuweisung setzen
@@ -666,15 +666,15 @@
       // Empfehlungsseite zeigen
       document.getElementById('empfehlungs-seite').style.display = 'block';
       document.getElementById('empfehlungs-seite').scrollTop = 0;
+    }
 
-      function zurueckZuFragebogen() {
-        const params = new URLSearchParams(window.location.search);
-        const token = params.get('return');
-        if (token) {
-          window.location.href = "https://www.soscisurvey.de/TG_Bachelorarbeit/?i=" + token;
-        } else {
-          alert('Kein Rückkehr-Token gefunden. Bitte kehre manuell zum Fragebogen zurück.');
-        }
+    function zurueckZuFragebogen() {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('return');
+      if (token) {
+        window.location.href = "https://www.soscisurvey.de/TG_Bachelorarbeit/?i=" + token;
+      } else {
+        alert('Kein Rückkehr-Token gefunden. Bitte kehre manuell zum Fragebogen zurück.');
       }
     }
 
