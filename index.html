@@ -666,6 +666,16 @@
       // Empfehlungsseite zeigen
       document.getElementById('empfehlungs-seite').style.display = 'block';
       document.getElementById('empfehlungs-seite').scrollTop = 0;
+
+      function zurueckZuFragebogen() {
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('return');
+        if (token) {
+          window.location.href = "https://www.soscisurvey.de/TG_Bachelorarbeit/?i=" + token;
+        } else {
+          alert('Kein Rückkehr-Token gefunden. Bitte kehre manuell zum Fragebogen zurück.');
+        }
+      }
     }
 
     genresErstellen();
@@ -711,6 +721,13 @@
         style="font-size:11px; font-weight:600; margin-bottom:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted);">
         Deine Auswahl</div>
       <div id="aus-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:10px;">
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; margin-top:40px; padding-bottom:20px;">
+        <button onclick="zurueckZuFragebogen()"
+          style="background:linear-gradient(135deg,#1a6fff,#0ea5e9);border:none;border-radius:10px;color:white;cursor:pointer;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;padding:13px 36px;">
+          Weiter zum Fragebogen →
+        </button>
       </div>
 
     </div>
