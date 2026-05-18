@@ -670,11 +670,11 @@
 
     function zurueckZuFragebogen() {
       const params = new URLSearchParams(window.location.search);
-      const token = params.get('return');
-      if (token) {
-        window.location.href = "https://www.soscisurvey.de/TG_Bachelorarbeit/?i=" + token;
+      const returnUrl = params.get('return');
+      if (returnUrl) {
+        window.location.href = decodeURIComponent(returnUrl);
       } else {
-        alert('Kein Rückkehr-Token gefunden. Bitte kehre manuell zum Fragebogen zurück.');
+        alert('Kein Rückkehr-Link gefunden. Bitte kehre manuell zum Fragebogen zurück.');
       }
     }
 
