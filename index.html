@@ -314,11 +314,11 @@
 
   <div class="header">
     <div class="header-top">
-      <div class="zaehler-badge" id="zaehler">0 / 10 ausgewählt</div>
+      <div class="zaehler-badge" id="zaehler">0 / 5 ausgewählt</div>
     </div>
     <div style="margin-bottom: 10px; display:flex; align-items:center; gap:16px;">
       <div>
-        <h1 style="font-size:17px; font-weight:600; margin-bottom:2px;">Wähle deine 10 Lieblingsfilme</h1>
+        <h1 style="font-size:17px; font-weight:600; margin-bottom:2px;">Wähle deine 5 Lieblingsfilme</h1>
         <p style="color:var(--text-muted); font-size:12px;">Klicke Filme an die du kennst und magst.</p>
       </div>
     </div>
@@ -337,7 +337,7 @@
   </div>
 
   <div class="footer-bar">
-    <span class="footer-text" id="footer-text">Wähle 10 Lieblingsfilme aus</span>
+    <span class="footer-text" id="footer-text">Wähle 5 Lieblingsfilme aus</span>
     <button id="weiter-btn" onclick="weiter()" disabled>Weiter →</button>
   </div>
 
@@ -595,18 +595,18 @@
       if (ausgewaehlt.some(f => f.id === film.id)) {
         ausgewaehlt = ausgewaehlt.filter(f => f.id !== film.id);
         karte.classList.remove('ausgewaehlt');
-      } else if (ausgewaehlt.length < 10) {
+      } else if (ausgewaehlt.length < 5) {
         ausgewaehlt.push(film);
         karte.classList.add('ausgewaehlt');
       } else {
-        alert('Du hast bereits 10 Filme ausgewählt. Wähle zuerst einen ab.');
+        alert('Du hast bereits 5 Filme ausgewählt. Wähle zuerst einen ab.');
         return;
       }
       let n = ausgewaehlt.length;
-      document.getElementById('zaehler').innerText = n + ' / 10 ausgewählt';
-      document.getElementById('zaehler').className = 'zaehler-badge' + (n === 10 ? ' voll' : '');
-      document.getElementById('footer-text').innerText = n === 10 ? 'Bereit! Klicke auf Weiter.' : `Noch ${10 - n} weitere auswählen`;
-      document.getElementById('weiter-btn').disabled = n < 10;
+      document.getElementById('zaehler').innerText = n + ' / 5 ausgewählt';
+      document.getElementById('zaehler').className = 'zaehler-badge' + (n === 5 ? ' voll' : '');
+      document.getElementById('footer-text').innerText = n === 5 ? 'Bereit! Klicke auf Weiter.' : `Noch ${10 - n} weitere auswählen`;
+      document.getElementById('weiter-btn').disabled = n < 5;
       document.getElementById('ausgewaehlt-filter-btn').innerText = '★ Ausgewählt (' + n + ')';
       if (nurAusgewaehlt) filternUndAnzeigen();
     }
@@ -620,7 +620,7 @@
       //authority = y
       'y': 'Dieser Film hat auf IMDb ein Rating von 8.9 / 10.',
       //commitment = z
-      'z': 'Basierend auf deiner Auswahl der 10 Filme passt dieser Film genau zu deinem Geschmack.',
+      'z': 'Basierend auf deiner Auswahl der 5 Filme passt dieser Film genau zu deinem Geschmack.',
     };
 
     // Aktive Bedingung — hier später per URL-Parameter oder Zufallszuweisung setzen
