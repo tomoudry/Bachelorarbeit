@@ -268,8 +268,8 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--text-muted);
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
       padding: 2px 5px;
       white-space: nowrap;
@@ -542,10 +542,10 @@
   <div id="seite-framing" class="seite">
     <div class="framing-container">
       <div class="framing-box">
-        <div class="framing-label">Ihre Empfehlung</div>
+        <div class="framing-label">Deine Empfehlung</div>
         <div class="framing-text" id="framing-text"></div>
         <div class="framing-footer">
-          <button class="weiter-btn" onclick="zeigeEmpfehlung()">Zur Empfehlung &rarr;</button>
+          <button class="weiter-btn" onclick="zeigeEmpfehlung()">Empfehlung ansehen &rarr;</button>
         </div>
       </div>
     </div>
@@ -556,19 +556,19 @@
   ═══════════════════════════════════════════ -->
   <div id="seite-empfehlung" class="seite">
     <div class="emp-header-bar">
-      <div style="font-size:15px; font-weight:600; color:var(--text);">Ihre Filmempfehlung</div>
+      <div style="font-size:15px; font-weight:600; color:var(--text);">Deine Filmempfehlung</div>
     </div>
     <div class="emp-container">
       <p
         style="font-size:13px; color:var(--text-muted); margin-bottom:24px; padding-bottom:20px; border-bottom:1px solid var(--border); line-height:1.6;">
-        Wir haben Ihnen einen Film empfohlen. Bitte sehen Sie sich die Empfehlung an.</p>
+        Dir wurde ein Film empfohlen. Bitte schau dir die Empfehlung an.</p>
       <!-- Hero: empfohlener Film -->
       <div id="emp-grid" style="display:flex; gap:28px; align-items:flex-start; margin-bottom:48px;"></div>
       <!-- Lieblingsfilme (nur Commitment-Bedingung) -->
       <div id="lieblinge-sektion" style="display:none;">
         <div
           style="font-size:11px; font-weight:600; margin-bottom:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted);">
-          Ihre Lieblingsfilme</div>
+          Deine Lieblingsfilme</div>
         <div id="lieblinge-grid"
           style="display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:10px; margin-bottom:40px;">
         </div>
@@ -1462,18 +1462,18 @@
     // ✏️ FRAMING-TEXTE HIER ANPASSEN:
     var // ✏️ FRAMING-TEXTE FÜR DIE FRAMING-SEITE (Seite vor der Empfehlung)
       framingTexteFramingSeite = {
-        'w': 'Basierend auf deiner Filmauswahl wird dir folgenden Film empfohlen.',
+        'w': 'Basierend auf deinem Streamingverhalten der letzten zwei Jahren, wird dir dieser Film empfohlen.',
         'x': '87 % der Teilnehmenden in dieser Befragung, die ähnliche Filme wie du ausgewählt haben, haben diesen Film mit 4 oder 5 Sternen bewertet.',
-        'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 97 % und gehört damit zu den bestbewerteten Filmen des Genres.',
+        'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 89 % und gehört damit zu den bestbewerteten Filmen des Genres.',
         'z': 'Basierend auf deinen 5 Lieblingsfilmen wird dir folgender Film empfohlen.'
       };
 
     // ✏️ FRAMING-TEXTE FÜR DIE EMPFEHLUNGSSEITE (neben dem Filmposter)
     framingTexteEmpfehlungsSeite = {
-      'w': 'Basierend auf Ihrer Filmauswahl haben wir Ihnen folgenden Film empfohlen.',
-      'x': '87 % der Teilnehmenden in dieser Befragung, die ähnliche Filme wie Sie ausgewählt haben, haben diesen Film mit 4 oder 5 Sternen bewertet.',
-      'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 97 % und gehört damit zu den bestbewerteten Filmen des Genres.',
-      'z': 'Basierend auf Ihren 5 Lieblingsfilmen haben wir Ihnen folgenden Film empfohlen.'
+      'w': 'Basierend auf deinem Streamingverhalten der letzten zwei Jahren, wird dir dieser Film empfohlen.',
+      'x': '87 % der Teilnehmenden in dieser Befragung, die ähnliche Filme wie du ausgewählt haben, haben diesen Film mit 4 oder 5 Sternen bewertet.',
+      'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 89 % und gehört damit zu den bestbewerteten Filmen des Genres.',
+      'z': 'Basierend auf deinen 5 Lieblingsfilmen wird dir folgender Film empfohlen.'
     };
 
     // ─── Seiten-Navigation ────────────────────────────────────────────────────
