@@ -447,9 +447,10 @@
         <div class="instruktions-label">Studieninformationen</div>
         <!-- ✏️ HIER den Instruktionstext anpassen: -->
         <div class="instruktions-text" id="instruktions-text">
-          In dieser Studie untersuchen ich, wie Empfehlungssysteme das menschliche Erleben beeinflussen.
-          Um dies zu untersuchen, benötige ich dein Streamingverhalten als Grundlage.
-          Bitte wähle auf der nächsten Seite 10 Filme aus, die du in den letzten zwei Jahren geschaut haben.
+          In dieser Studie untersuche ich Empfehlungssysteme. Als Grundlage benötige ich
+          dein Streamingverhalten der letzten zwei Jahre. Bitte wähle auf der nächsten
+          Seite 10 Filme aus, die du in diesem Zeitraum geschaut hast. Für die Filmauswahl
+          stehen dir insgesamt 850 Filme zur Verfügung.
 
           Klicke auf "Weiter", um zu beginnen.
 
@@ -503,9 +504,9 @@
       <div class="instruktions-box">
         <div class="instruktions-label">Hinweis</div>
         <!-- ✏️ INSTRUKTIONSTEXT LIEBLINGE HIER ANPASSEN: -->
-        <div class="instruktions-text">Bitte w&auml;hle nun deine 5 pers&ouml;nlichen Lieblingsfilme aus der Liste
-          aus, unabh&auml;ngig davon, wann du
-          diese gesehen haben.</div>
+        <div class="instruktions-text">
+          Bitte w&auml;hle nun deine 5 pers&ouml;nlichen Lieblingsfilme aus der Liste aus, unabh&auml;ngig davon, wann
+          du diese gesehen haben.</div>
         <div class="instruktions-footer">
           <button class="weiter-btn" onclick="zeigeSeite('seite-lieblinge')">Weiter &rarr;</button>
         </div>
@@ -1474,18 +1475,18 @@
     // ✏️ FRAMING-TEXTE HIER ANPASSEN:
     var // ✏️ FRAMING-TEXTE FÜR DIE FRAMING-SEITE (Seite vor der Empfehlung)
       framingTexteFramingSeite = {
-        'w': 'Basierend auf deinem Streamingverhalten der letzten zwei Jahren, wird dir dieser Film empfohlen.',
-        'x': '87 % der Teilnehmenden in dieser Befragung, die ähnliche Filme wie du ausgewählt haben, haben diesen Film mit 4 oder 5 Sternen bewertet.',
-        'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 89 % und gehört damit zu den bestbewerteten Filmen des Genres.',
-        'z': 'Basierend auf deinen 5 Lieblingsfilmen wird dir folgender Film empfohlen.'
+        'w': 'Basierend auf deinem Streamingverhalten, wird dir dieser Film empfohlen.',
+        'x': 'Basierend auf deinem Streamingverhalten und den Bewertungen von Teilnehmenden mit ähnlichem Filmgeschmack, von denen 87% diesen Film mit 4 oder 5 Sternen bewertet haben, wird dir dieser Film empfohlen.',
+        'y': 'Basierend auf deinem Streamingverhalten wird dir dieser Film empfohlen. 89% ausgewählter Filmexperten auf Rotten Tomatoes haben ihn positiv bewertet.',
+        'z': 'Basierend auf deinem Streamingverhalten und deinen 5 Lieblingsfilmen, wird dir folgender Film empfohlen.'
       };
 
     // ✏️ FRAMING-TEXTE FÜR DIE EMPFEHLUNGSSEITE (neben dem Filmposter)
     framingTexteEmpfehlungsSeite = {
-      'w': 'Basierend auf deinem Streamingverhalten der letzten zwei Jahren, wird dir dieser Film empfohlen.',
-      'x': '87 % der Teilnehmenden in dieser Befragung, die ähnliche Filme wie du ausgewählt haben, haben diesen Film mit 4 oder 5 Sternen bewertet.',
-      'y': 'Dieser Film hat auf Rotten Tomatoes einen Tomatometer-Score von 89 % und gehört damit zu den bestbewerteten Filmen des Genres.',
-      'z': 'Basierend auf deinen 5 Lieblingsfilmen wird dir folgender Film empfohlen.'
+      'w': 'Basierend auf deinem Streamingverhalten, wird dir dieser Film empfohlen.',
+      'x': 'Basierend auf deinem Streamingverhalten und den Bewertungen von Teilnehmenden mit ähnlichem Filmgeschmack, von denen 87% diesen Film mit 4 oder 5 Sternen bewertet haben, wird dir dieser Film empfohlen.',
+      'y': 'Basierend auf deinem Streamingverhalten wird dir dieser Film empfohlen. 89% ausgewählter Filmexperten auf Rotten Tomatoes haben ihn positiv bewertet.',
+      'z': 'Basierend auf deinem Streamingverhalten und deinen 5 Lieblingsfilmen, wird dir folgender Film empfohlen.'
     };
 
     // ─── Seiten-Navigation ────────────────────────────────────────────────────
